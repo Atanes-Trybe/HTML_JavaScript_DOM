@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo getElementById</title>
+  </head>
+  <body>
+    <p id="p1">Cor aplicada!!</p>
+    <button id="btnAzul">Azul</button>
+    <button id="btnVerde">Verde</button>
+
+    <script>
+      function mudarCor(novaCor) {
+        let elemento = document.getElementById('p1');
+        elemento.style.color = novaCor;
+      }
+
+      const btnAzul = document.getElementById('btnAzul');
+      btnAzul.addEventListener('click', () => mudarCor('blue'));
+
+      const btnVerde = document.getElementById('btnVerde');
+      btnVerde.addEventListener('click', () => mudarCor('green'));
+    </script>
+  </body>
+</html>

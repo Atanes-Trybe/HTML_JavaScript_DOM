@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo querySelector</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Muda as cores do texto</p>
+    <p id="p1">Cor aplicada!!</p>
+    <button class="btn" id="btnAzul">Azul</button>
+    <button class="btn" id="btnVerde">Verde</button>
+
+    <script>
+      const botaoAzul = document.querySelector('#btnAzul');
+      const botaoVerde = document.querySelector('.btn');
+      const paragrafo = document.querySelector('p');
+
+      console.log(botaoAzul);
+      console.log(botaoVerde);
+      console.log(paragrafo);
+    </script>
+  </body>
+</html>

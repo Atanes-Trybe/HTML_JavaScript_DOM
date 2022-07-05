@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo getElementsByClassName</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p id="p1">Cor aplicada!!</p>
+    <button class="btn" id="btnAzul">Azul</button>
+    <button class="btn" id="btnVerde">Verde</button>
+
+    <script>
+      const botoes = document.getElementsByClassName('btn');
+
+      for (botao of botoes) {
+        classeBotao(botao);
+      }
+
+      function classeBotao(botao) {
+        botao.className = 'btn estiloBotao';
+      }
+    </script>
+  </body>
+</html>

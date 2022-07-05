@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo querySelectorAll</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Muda as cores do texto</p>
+    <p id="p1">Cor aplicada!!</p>
+    <button class="btn" id="btnAzul">Azul</button>
+    <button class="btn" id="btnVerde">Verde</button>
+
+    <script>
+      const botoes = document.querySelectorAll('.btn');
+      const paragrafos = document.querySelectorAll('p');
+
+      console.log(botoes);
+      console.log(paragrafos);
+    </script>
+  </body>
+</html>

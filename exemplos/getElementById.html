@@ -7,8 +7,11 @@
     <p id="p1">Cor aplicada!!</p>
     <button id="btnAzul">Azul</button>
     <button id="btnVerde">Verde</button>
+    <div id="pixel-board"></div>
 
     <script>
+      const novoParagrafo = (document.createElement('p')).classList = 'pixel';
+      document.getElementById('pixel-board').appendChild(novoParagrafo);
       function mudarCor(novaCor) {
         let elemento = document.getElementById('p1');
         elemento.style.color = novaCor;

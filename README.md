@@ -201,4 +201,14 @@ Nós já vimos alguns métodos para encontrar elementos DOM na estrutura da pág
 
 [(ref. W3Schools)](https://w3schools.sinsixx.com/dom/navigate.gif)
 
+### localizar o *pai* de um elemento
+```elemento.parentElement```
+
+```elemento.parentNode```
+
+### localizar os *filhos* de um elemento
+```elemento.children``` -> Retorna uma HTMLCollection
+
+```elemento.childNodes``` -> Retorna uma NodeList
+
 Mais informações sobre DOM e como fazer sua manipulação com JavaScript você pode consultar o [W3Schools](https://www.w3schools.com/js/js_htmldom.asp) ou o [MDN Web Docs community](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction), [W3Schools](https://www.w3schools.com/js/js_htmldom_document.asp)

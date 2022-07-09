@@ -270,4 +270,49 @@ document.getElementById('formEndereco').childNodes[4].nextElementSibling;
 document.getElementById('formEndereco').childNodes[4].previousElementSibling;
 ```
 
+### Exemplo completo
+
+```HTML
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegando pelo DOM</title>
+</head>
+<body>
+    <h1>Navegando pelo DOM, pais e filhos</h1>
+    <section id="pai">
+        <p>Primeiro filho</p>
+        <span>Segundo filho</span>
+        <div>Terceiro filho</div>
+    </section>
+    <script src="paiEFilhos.js"></script>
+</body>
+</html>
+```
+paiEFilhos.html
+
+```JavaScript
+const pai = document.getElementById('pai');
+const filho = pai.childNodes[3];
+
+console.log('Elemento pai:', pai);
+console.log('Lista dos nós filhos:', pai.childNodes);
+console.log('Lista dos elementos HTML filhos', pai.children);
+console.log('Primeiro nó filho:', pai.firstChild);
+console.log('Ultimo nó filho:', pai.lastChild);
+console.log('Primeiro elemento HTML filho:', pai.firstElementChild);
+console.log('Ultimo elemento HTML filho:', pai.lastElementChild);
+console.log('Nó irmão anterior', filho.previousSibling);
+console.log('Próximo nós irmão', filho.nextSibling);
+console.log('Elemento HTML irmão anterior', filho.previousElementSibling);
+console.log('Próximo Elemento HTML irmão', filho.nextElementSibling);
+```
+paiEFilhos.js
+
+![image](https://user-images.githubusercontent.com/84469453/178113687-8493a2ef-a09b-4644-9b4b-50f53c8850b2.png)
+
+
 Mais informações sobre DOM e como fazer sua manipulação com JavaScript você pode consultar o [W3Schools](https://www.w3schools.com/js/js_htmldom.asp) ou o [MDN Web Docs community](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction), [W3Schools](https://www.w3schools.com/js/js_htmldom_document.asp)

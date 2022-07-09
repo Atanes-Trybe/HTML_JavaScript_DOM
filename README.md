@@ -202,13 +202,72 @@ Nós já vimos alguns métodos para encontrar elementos DOM na estrutura da pág
 [(ref. W3Schools)](https://w3schools.sinsixx.com/dom/navigate.gif)
 
 ### localizar o *pai* de um elemento
-```elemento.parentElement```
 
-```elemento.parentNode```
+Todo *nó* de elemento possui um pai, com excessão do nó do documento (*document*), por consequencia cada nó de elemento possui uma propriedade chamada *parentNode* que é uma referência para o pai do elemento selecionado.
+
+```elementoSelecionado.parentNode```
+
+Da mesma forma, todo *Elemento HTML* também possui um pai, com excessão do elemento HTML que é o *topo* da arvore de elementos HTML da página, para acessar o pai de um elemento HTML  podemos utilizar a propriedade *parentElement* que é uma referência para o pai do elemento HTML selecionado.
+
+```elementoSelecionado.parentElement```
 
 ### localizar os *filhos* de um elemento
-```elemento.children``` -> Retorna uma HTMLCollection
 
-```elemento.childNodes``` -> Retorna uma NodeList
+Cada *nó* de elemento só pode ter um pai (*parent*), mas por outro lado, o mesmo nó de elemento pode ter um ou mais filhos (childrens). Para visualizar todos os filhos de um nó de elemento podemos usar a propriedade *childNodes* que nos retorna uma lista de nós (NodeList) que contém todos os filhos do elemento na sua ordem de origem.
+
+```elementoSelecionado.childNodes``` -> Retorna uma NodeList
+
+Como o NodeList tem uma estrutura muito parecida com um Array podemos caminhar pelos seus elementos utilizando seu indice, por exemplo:
+
+```JavaScript
+document.getElementById('formEndereco').childNodes; // Lista completa de filhos
+document.getElementById('formEndereco').childNodes[0]; // Acessando os filhos individualmente
+#text
+document.getElementById('formEndereco').childNodes[1];
+<div class='linha'>...</div>
+```
+
+Existem outros métodos que nos ajudam muito nessa navegação para localizar elementos filhos, para localizar o primeiro filho, por exemplo:
+
+```document.getElementById('formEndereco').firstChild;```
+
+Para localizar o último filho podemos usar:
+
+```document.getElementById('formEndereco').lastChild;```
+
+Seguindo a mesma regra para os *elementos HTML* podemos usar a propriedade *children* que nos retorna uma lista de elementos HTML (HTMLCollection) que contém todos os filhos do elemento HTML na sua ordem de origem.
+
+```elementoSelecionado.children``` -> Retorna uma HTMLCollection
+
+```JavaScript
+document.getElementById('formEndereco').children; // Lista completa de elementos HTML filhos
+document.getElementById('formEndereco').children[0]; // Acessando os elementos HTML filhos individualmente
+<div class='linha'>...</div>
+document.getElementById('formEndereco').children[1];
+<div class='linha'>...</div>
+```
+
+Para localizar o primeiro elemento HTML filho:
+
+```document.getElementById('formEndereco').firstElementChild;```
+
+Para localizar o último elemento HTML filho:
+
+```document.getElementById('formEndereco').lastElementChild;```
+
+### Localizar os *irmãos* de um elemento
+
+Seguindo a lógica que podemos navegar para cima (pai) e para baixo (filhos) na árvore DOM, também é possivel navegar de um lado para o outro, obtendo o próximo *nó* ou o anterior que sejam irmãos (*siblings*), ou seja, estejam no mesmo nivel da arvore do DOM. As propriedades que utilizamos para isso são *nextSibling* e *previousSibling*.
+
+```
+document.getElementById('formEndereco').childNodes[4].nextSibling;
+document.getElementById('formEndereco').childNodes[4].previousSibling;
+```
+Para elementos HTML usamos *nextElementSibling* e *previousElementSibling*.
+
+```
+document.getElementById('formEndereco').childNodes[4].nextElementSibling;
+document.getElementById('formEndereco').childNodes[4].previousElementSibling;
+```
 
 Mais informações sobre DOM e como fazer sua manipulação com JavaScript você pode consultar o [W3Schools](https://www.w3schools.com/js/js_htmldom.asp) ou o [MDN Web Docs community](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction), [W3Schools](https://www.w3schools.com/js/js_htmldom_document.asp)

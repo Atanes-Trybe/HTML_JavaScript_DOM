@@ -316,3 +316,5 @@ paiEFilhos.js
 
 
 Mais informações sobre DOM e como fazer sua manipulação com JavaScript você pode consultar o [W3Schools](https://www.w3schools.com/js/js_htmldom.asp) ou o [MDN Web Docs community](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction), [W3Schools](https://www.w3schools.com/js/js_htmldom_document.asp)
+
+Obs.: Sua contribuição é sempre bem vinda, por isso, se tiver alguma sugestão de melhoria e ou recomendação de ajuste/mudança das informações desse repositório, fique a vontade para abrir uma [ISSUE](https://github.com/Atanes-Trybe/HTML_JavaScript_DOM/issues) que ficarei muito feliz em receber suas sugestões, criticas e comentários!! 😊
